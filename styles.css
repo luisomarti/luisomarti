@@ -1,0 +1,334 @@
+/* RESET */
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* FONTS */
+@font-face {
+    font-family: Outfit;
+    src: url(assets/Outfit-SemiBold.eot), url(assets/Outfit-SemiBold.woff),
+        url(assets/Outfit-SemiBold.woff2);
+    font-weight: 600;
+}
+
+@font-face {
+    font-family: Switzer;
+    src: url(assets/Switzer-Light.eot), url(assets/Switzer-Light.woff),
+        url(assets/Switzer-Light.woff2);
+    font-weight: 300;
+}
+
+/* CUSTOM PROPERTIES */
+:root {
+    --bg: #f2f2f2;
+    --primary: #242424;
+    --grey: #e2e2e2;
+}
+
+/* GENERAL */
+::selection {
+    color: var(--bg);
+    background-color: var(--primary);
+}
+
+body {
+    background-color: var(--bg);
+    color: var(--primary);
+    font-family: Switzer, sans-serif;
+    font-size: 20px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: Outfit, sans-serif;
+    text-transform: uppercase;
+    line-height: 100%;
+}
+
+h1 {
+    font-size: 100px;
+}
+
+h2 {
+    font-size: 40px;
+}
+
+a {
+    text-decoration: none;
+    color: var(--primary);
+}
+
+p {
+    line-height: 145%;
+}
+
+img {
+    width: 100%;
+    height: auto;
+}
+
+.container {
+    width: 100%;
+    max-width: 912px;
+    height: auto;
+    margin: 0 auto;
+    padding: 0 24px;
+}
+
+.button {
+    background-color: var(--primary);
+    color: var(--bg);
+    text-decoration: none;
+
+    display: flex;
+    align-items: center;
+    gap: 12px;
+
+    padding: 12px 24px;
+    border-radius: 4px;
+
+    font-family: Outfit, sans-serif;
+    font-size: 16px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+
+    cursor: pointer;
+}
+
+.button .icon {
+    width: 18px;
+    height: 18px;
+}
+
+/* NAVIGATION */
+nav {
+    width: 100%;
+    height: auto;
+    padding: 50px 0;
+}
+
+.navbar,
+.brand {
+    display: flex;
+    align-items: center;
+}
+
+.brand {
+    gap: 12px;
+}
+
+.name {
+    font-family: Outfit, sans-serif;
+    font-size: 22px;
+}
+
+.navbar {
+    justify-content: space-between;
+}
+
+.brand .avatar {
+    border-radius: 999px;
+    overflow: hidden;
+    width: 64px;
+    height: 64px;
+}
+
+/* HEADER */
+header {
+    width: 100%;
+    height: auto;
+    padding: 56px 0;
+}
+
+header h1 {
+    margin-bottom: 24px;
+}
+
+/* PORTFOLIO */
+section.portfolio {
+    width: 100%;
+    height: auto;
+    padding: 56px 0;
+}
+
+section.portfolio h2 {
+    margin-bottom: 48px;
+}
+
+.portfolio-list {
+    border-bottom: 1px solid var(--grey);
+}
+
+.portfolio-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    text-decoration: none;
+    color: var(--primary);
+
+    padding: 32px 0;
+    border-top: 1px solid var(--grey);
+
+    background-color: transparent;
+    cursor: pointer;
+
+    transition: all 0.3s ease-in-out;
+}
+
+.portfolio-item:hover {
+    padding: 32px 16px;
+    background-color: var(--grey);
+}
+
+.portfolio-content {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 56px;
+}
+
+.project-name {
+    width: 200px;
+}
+
+.project-link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    gap: 12px;
+}
+
+.project-link .icon {
+    width: 24px;
+    height: 24px;
+}
+
+/* SKILLS */
+section.skills {
+    width: 100%;
+    height: auto;
+    padding: 56px 0;
+}
+
+section.skills h2 {
+    margin-bottom: 48px;
+}
+
+.skills-row {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 112px;
+}
+
+.skill-item {
+    margin-bottom: 24px;
+
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 12px;
+}
+
+/* SOCIAL */
+section.social {
+    width: 100%;
+    height: auto;
+    padding: 56px 0 112px 0;
+}
+
+section.social h2 {
+    margin-bottom: 48px;
+}
+
+.social-list {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 24px;
+}
+
+.social-list .icon {
+    width: 24px;
+    height: 24px;
+}
+
+/* FOOTER */
+footer {
+    width: 100%;
+    height: auto;
+}
+
+.footer {
+    border-top: 1px solid var(--grey);
+    padding: 56px 0;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+    .project-description {
+        display: none;
+    }
+}
+
+@media (max-width: 375px) {
+    h1 {
+        font-size: 40px;
+    }
+
+    h2 {
+        font-size: 24px;
+    }
+
+    body,
+    p {
+        font-size: 16px;
+    }
+
+    .navbar {
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+        gap: 32px;
+    }
+
+    .skills-row {
+        flex-direction: column;
+        gap: 0px;
+    }
+
+    .social-list span {
+        display: none;
+    }
+
+    .footer {
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+        gap: 24px;
+    }
+
+    section.portfolio,
+    section.skills {
+        padding: 24px 0;
+    }
+}
